@@ -8,6 +8,7 @@ module.exports = withNativeFederation({
 
   exposes: {
     "./Module": "./src/app/meals/meals.module.ts",
+    "./AppComponent": "./src/app/app.component.ts",
   },
 
   shared: {

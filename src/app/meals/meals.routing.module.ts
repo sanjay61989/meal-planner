@@ -17,6 +17,11 @@ const routes: Routes = [
         path: 'tracker',
         component: DailyTrackerComponent,
       },
+      {
+        path: '',
+        redirectTo: 'meallist',
+        pathMatch: 'full',
+      },
     ],
   },
 ];

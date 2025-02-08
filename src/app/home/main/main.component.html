@@ -1,0 +1,15 @@
+<div class="container">
+  <button (click)="reveal()" *ngIf="!showFlower && countdown === 0">
+    I want to say one thing... Click here to know!
+  </button>
+  <p *ngIf="countdown > 0">Revealing in {{ countdown }}...</p>
+
+  <div class="flower-container" *ngIf="showFlower">
+    <img
+      src="https://wallpaperaccess.com/full/1130394.jpg"
+      class="flower"
+      alt="Flower"
+    />
+    <p class="message">Vaishnavi Will you be my Valentine? ❣️</p>
+  </div>
+</div>

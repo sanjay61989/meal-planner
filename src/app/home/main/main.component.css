@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #ffe6e6;
+  text-align: center;
+}
+button {
+  padding: 15px 25px;
+  font-size: 18px;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  background: #cc0000;
+}
+.flower-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.flower {
+  width: 250px;
+  opacity: 0;
+  transform: translateY(100px);
+  animation: riseUp 1.5s ease-out forwards;
+}
+.message {
+  font-family: cursive;
+  font-size: 24px;
+  font-weight: bold;
+  color: #b30000;
+  opacity: 0;
+  animation: fadeIn 2s ease-in 1.5s forwards;
+}
+@keyframes riseUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

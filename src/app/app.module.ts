@@ -3,20 +3,27 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import { MealsModule } from './meals/meals.module';
+
+// const routes22: Routes = [
+//   {
+//     path: 'meals',
+//     loadChildren: () =>
+//       import('./meals/meals.module').then((m) => m.MealsModule),
+//   },
+//   { path: '', redirectTo: 'meals', pathMatch: 'full' },
+// ];
 
 const routes: Routes = [
   {
-    path: 'meals',
-    loadChildren: () =>
-      import('./meals/meals.module').then((m) => m.MealsModule),
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
   },
-  { path: '', redirectTo: 'meals', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, MealsModule, RouterModule.forRoot(routes)],
+  imports: [BrowserModule, RouterModule.forRoot(routes)],
   providers: [],
   bootstrap: [AppComponent],
 })
